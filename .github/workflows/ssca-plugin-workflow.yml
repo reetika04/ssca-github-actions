@@ -31,7 +31,7 @@ jobs:
       - name: Set Vault Environment Variables
         run: |
           echo "VAULT_ADDR=${{ secrets.VAULT_URL }}" >> $GITHUB_ENV
-          echo "VAULT_TOKEN=${{ steps.vault_login.outputs.token }}" >> $GITHUB_ENV
+          # echo "VAULT_TOKEN=${{ steps.vault_login.outputs.token }}" >> $GITHUB_ENV
           
       - name: Run SSCA Plugin Action
         uses: ./ # Uses the action in the root directory of the repository
